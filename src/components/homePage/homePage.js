@@ -1,6 +1,6 @@
 import './homePage.css';
 import React, { Fragment, useEffect, useState } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function HomePage() {
   const [topSongs, setTopSongs] = useState([]);
 
@@ -45,7 +45,7 @@ export default function HomePage() {
                         </div>
                     </div>
                     <div className="home__hero-img-wrapper">
-                        <img width="400px" src={datumn.image[1]["#text"]} alt="Image of the track"/>
+                        <img width="400px" src={datumn.image[1]["#text"]} alt="Track"/>
                     </div>
                 </div>
             </div>

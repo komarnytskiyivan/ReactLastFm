@@ -50,7 +50,7 @@ export default class LookSinger extends Component {
                         </div>
                     </div>
                     <div className="home__hero-img-wrapper">
-                        <img width="400px" src={singer.artist.image[1]["#text"]} alt="Image of the artist"/>
+                        <img width="400px" src={singer.artist.image[1]["#text"]} alt="Artist"/>
                     </div>
                 </div>
             </div>
