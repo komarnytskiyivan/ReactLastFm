@@ -3,16 +3,19 @@ import LookSinger from '../lookSinger';
 import SearchSong from '../searchSong';
 import Home from '../homePage';
 import Navbar from '../navbar';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import gotService from '../../services/gotService';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 function App() {
   return (
     <Router>
       <Navbar />
+      <Switch>
       <div className='app'>
         <Route path='/' component={Home} exact/>
         <Route path='/searchSong/' component={SearchSong} exact/>
-        <Route path='/lookSinge/' component={LookSinger} exact/>
+        <Route path='/lookSinger/' component={LookSinger} exact/>
       </div>
+      </Switch>
     </Router>
   );
 }
