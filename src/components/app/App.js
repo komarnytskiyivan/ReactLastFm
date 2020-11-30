@@ -3,7 +3,6 @@ import LookSinger from '../lookSinger';
 import SearchSong from '../searchSong';
 import Home from '../homePage';
 import Navbar from '../navbar';
-import gotService from '../../services/gotService';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 function App() {
   return (

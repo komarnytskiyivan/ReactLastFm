@@ -1,6 +1,6 @@
-import './homePage.css'
+import './homePage.css';
 import React, { Fragment, useEffect, useState } from "react";
-
+import { BrowserRouter, Route, Link } from "react-router-dom";
 export default function HomePage() {
   const [topSongs, setTopSongs] = useState([]);
 
@@ -20,7 +20,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       {topSongs?.tracks?.track.length &&
         topSongs.tracks.track.map((datumn) => {
           return (
@@ -32,7 +32,12 @@ export default function HomePage() {
                 >
                     <div className="col">
                         <div className="home__hero-text-wrapper">
-                            <div className="top-line">{datumn.artist.name}</div>
+                            <div className="top-line"><Link to={{
+                            pathname: '/lookSinger',
+                            state: {
+                                singer: datumn.artist.name
+                            }
+                            }}>{datumn.artist.name}</Link></div>
                             <h1 className='heading'>{datumn.name}</h1>
                             <p className='home__hero-subtitle'>
                             {datumn.artist.url}
