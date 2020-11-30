@@ -2,7 +2,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import { FaBars, FaTimes} from 'react-icons/fa';
-import {Button} from '../button/button';
 import './navbar.css';
 import { IconContext } from 'react-icons/lib'
 function Navbar() {
@@ -35,11 +34,6 @@ function Navbar() {
                     <li className="nav-item" onClick={closeMobileMenu}>
                         <Link to="/" className="nav-links">
                             Home
-                        </Link>
-                    </li>
-                    <li className="nav-item" onClick={closeMobileMenu}>
-                        <Link to="/lookSigner" className="nav-links">
-                            Signer
                         </Link>
                     </li>
                     <li className="nav-item" onClick={closeMobileMenu}>

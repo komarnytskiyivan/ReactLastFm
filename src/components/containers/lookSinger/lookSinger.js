@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './lookSinger.css'
+import ItemDetails from '../../ui/itemDetails/itemDetails'
 export default class LookSinger extends Component {
     state = {
         singer: {}
@@ -27,34 +28,18 @@ export default class LookSinger extends Component {
       render() {
         let singer = this.state.singer
         if (!singer.artist) {
-            return <div>Loding singer info...</div>
+            return <div>Loading singer info...</div>
         }
         const listTags = singer.artist.tags.tag.map((tag) =>
             <>{tag.name} </>
         );
         return(
-            <div className={'home__hero-section darkBg'}>
-            <div className="container">
-                <div className="row home__hero-row"
-                style={{display:'flex',flexDirection:'row-reverse'}}
-                >
-                    <div className="col">
-                        <div className="home__hero-text-wrapper">
-                            <div className="top-line">
-                            {listTags} 
-                            </div>
-                            <h1 className='heading'>{singer.artist.name}</h1>
-                            <p className='home__hero-subtitle'>
-                            {singer.artist.bio.summary}
-                            </p>
-                        </div>
-                    </div>
-                    <div className="home__hero-img-wrapper">
-                        <img width="400px" src={singer.artist.image[1]["#text"]} alt="Artist"/>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ItemDetails topLine={listTags}
+            heading={singer.artist.name}
+            subTitle={singer.artist.bio.summary}
+            image={singer.artist.image[1]["#text"]}
+            notLink={'yes'}
+        />
         )
       }
 }

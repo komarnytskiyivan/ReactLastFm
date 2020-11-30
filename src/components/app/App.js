@@ -1,8 +1,8 @@
 import './App.css';
-import LookSinger from '../lookSinger';
-import SearchSong from '../searchSong';
-import Home from '../homePage';
-import Navbar from '../navbar';
+import LookSinger from '../containers/lookSinger/lookSinger';
+import SearchSong from '../containers/searchSong/searchSong';
+import Home from '../containers/homePage/homePage';
+import Navbar from '../ui/navbar/navbar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 function App() {
   return (
