@@ -2,7 +2,6 @@ import React from 'react'
 import './itemDetails.css'
 import { Link } from "react-router-dom";
 export default function ItemDetails(props) {
-    console.log(props)
     return (
         <div className={'home__hero-section darkBg'}>
             <div className="container">

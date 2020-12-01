@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
 import ItemDetails from '../ui/itemDetails/itemDetails'
 export default function ItemList(songs) {
-    console.log(songs)
     return (
         <div>
       {

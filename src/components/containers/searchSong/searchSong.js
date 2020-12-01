@@ -1,7 +1,6 @@
 import React from 'react'
 import './searchSong.css'
-import { Fragment, useEffect, useState, useRef, createRef } from "react";
-import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 import SearchSongsList from '../../searchSongsList/searchSongsList'
   export default function SearchSong() {
     const [topSongs, setTopSongs] = useState([]);

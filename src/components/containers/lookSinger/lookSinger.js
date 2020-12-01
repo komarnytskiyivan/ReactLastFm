@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './lookSinger.css'
 import ItemDetails from '../../ui/itemDetails/itemDetails'
 export default class LookSinger extends Component {
     state = {
@@ -8,14 +7,12 @@ export default class LookSinger extends Component {
     componentDidMount () {
         let { singer } = this.props.location.state;
         singer = singer.replace(/ /g,"+");
-        console.log(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${singer}&api_key=a3c9fd095f275f4139c33345e78741ed&format=json`)
         const fetchData = async () => {
         try {
             const response = await fetch(
                 `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${singer}&api_key=a3c9fd095f275f4139c33345e78741ed&format=json`
             );
             const data = await response.json();
-            console.log(data)
             this.setState({
                 singer: data
             })

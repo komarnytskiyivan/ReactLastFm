@@ -1,6 +1,4 @@
-import './homePage.css';
 import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import TopSongsList from '../../topSongsList/topSongsList'
 export default function HomePage() {
   const [topSongs, setTopSongs] = useState([]);
